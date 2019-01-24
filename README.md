@@ -5,6 +5,7 @@ best_blast.sh
 
 ## Expression
 - mapping with hisat2 and call count using htseq-count
+
 xso_gene_expr.sh
 
 - convert the raw counts from htseq-count to vst using DEseq2
