@@ -32,7 +32,7 @@ do
 	outdir=$stoutdir/${SAMPLE}
 	mkdir -p $outdir
 	stringtie -e -B -p $ncpu -G $RefGene -A $outdir/gene_exp.tab -o $outdir/transcript.gtf $htoutdir/${SAMPLE}.bam   
-    #featureCounts --donotsort -p -Q 10 -t exon -g gene_id -s 0 -T 10 -a $RefGene -o $outdir/gene_exp.cnt $htoutdir/${SAMPLE}.bam
+        #featureCounts --donotsort -p -Q 10 -t exon -g gene_id -s 0 -T 10 -a $RefGene -o $outdir/gene_exp.cnt $htoutdir/${SAMPLE}.bam
 done
 cat sample_list | xargs -n 1 -P 10 ./htseq.sh
 
