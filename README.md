@@ -4,11 +4,11 @@
 best_blast.sh
 
 ## Expression
-- mapping with hisat2 and call count using htseq-count
+- mapping the rnaseq reads to genome using hisat2 and call count using htseq-count
 
   xso_gene_expr.sh
 
-- convert the raw counts from htseq-count to vst using DEseq2
+- convert the raw counts generated from htseq-count to vst using DEseq2
 
   convert_counts_to_VST.R
 
