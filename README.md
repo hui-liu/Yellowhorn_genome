@@ -3,5 +3,5 @@
 ### best blast
 best_blast.sh
 
-### mapping and call count
+### mapping with hisat2 and call count using htseq-count
 xso_gene_expr.sh
