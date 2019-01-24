@@ -1,6 +1,6 @@
 # Yellowhorn genome project
 
-## best blast
+## Best blast hit between yellowhron and Potra (P. tremula), Potri, Piabi, Artha (sort by bitsore value)
 best_blast.sh
 
 ## Expression
