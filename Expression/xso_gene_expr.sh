@@ -32,18 +32,18 @@ do
 	outdir=$stoutdir/${SAMPLE}
 	mkdir -p $outdir
 	stringtie -e -B -p $ncpu -G $RefGene -A $outdir/gene_exp.tab -o $outdir/transcript.gtf $htoutdir/${SAMPLE}.bam   
-        #featureCounts --donotsort -p -Q 10 -t exon -g gene_id -s 0 -T 10 -a $RefGene -o $outdir/gene_exp.cnt $htoutdir/${SAMPLE}.bam
+    #featureCounts --donotsort -p -Q 10 -t exon -g gene_id -s 0 -T 10 -a $RefGene -o $outdir/gene_exp.cnt $htoutdir/${SAMPLE}.bam
 done
 cat sample_list | xargs -n 1 -P 10 ./htseq.sh
 
 # htseq-count results
 cp */*count ../htseq_count/
-# delete outliers
+# remove outlier samples with low mapping rare
 rm E2_6GP.count  
 rm C9_5GR_1.count
 
 
-# delete outliers
+# remove outlier samples with low mapping rare
 sed '/E2_6GP/d;/C9_5GR_1/d' sample_list > xso_exp_sample
 
 # featureCounts 
