@@ -3,7 +3,7 @@ remove(list = ls())
 setwd("/mnt/spruce/data/yellow_horn/Expression")
 
 # load data
-Expr0 <- read.delim("xso_exp_VST_mean.txt", row.names = 1)
+Expr0 <- read.delim("xso_exp_VST.txt", row.names = 1)
 
 # remove non-varying genes
 # mad: Median Absolute Deviation
