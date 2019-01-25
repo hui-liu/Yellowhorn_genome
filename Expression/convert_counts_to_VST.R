@@ -39,7 +39,7 @@ pdf(file="xso_exp_VST_density.pdf", height=8, width=8)
 plot(density(vst))
 dev.off()
 
-#write out
+#write out -- for construct network
 vst_out <- cbind(gene = rownames(vst), vst)
 write.table(vst_out, file = 'xso_exp_VST.txt', sep = '\t', quote = FALSE, row.names = FALSE)
 
@@ -48,6 +48,6 @@ write.table(vst_out, file = 'xso_exp_VST.txt', sep = '\t', quote = FALSE, row.na
 colnames(vst) <- gsub('_[0-9]$', '', colnames(vst))
 vst_mean <- avearrays(vst)
 
-#write out
+#write out -- for expression tools
 vst_mean <- cbind(gene = rownames(vst_mean), vst_mean)
 write.table(vst_mean, file = 'xso_exp_VST_mean.txt', sep = '\t', quote = FALSE, row.names = FALSE)
