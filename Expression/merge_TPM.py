@@ -1,7 +1,7 @@
 import sys
 
 samples = [line.strip().split()[0] for line in open(sys.argv[1], 'r')]
-inTab='st_out/%s/gene_exp.tab'
+inTab='st_out/%s/gene_exp.tab' # %s: samples
 
 d_exp = {}
 for sample in samples:
