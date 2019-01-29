@@ -1,7 +1,7 @@
 # Yellowhorn genome project
 
 ## Best blast hit between yellowhron and Potra (P. tremula), Potri, Piabi, Artha (sort by bitsore value)
-best_blast.sh
+`best_blast.sh`
 
 ## Expression
 - mapping the rnaseq reads to genome using hisat2 and call count using htseq-count
