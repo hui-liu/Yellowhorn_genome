@@ -11,7 +11,7 @@ for sample in samples:
             if line[0] == '#':
                 continue
             temp = line.split()
-            if temp[0] == 'Geneid':
+            if temp[0] == 'Gene':
                 continue
             gene_id = temp[0]
             exp_value = temp[-1]
