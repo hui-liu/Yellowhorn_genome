@@ -18,4 +18,11 @@ best_blast.sh
 
 - Calculate co-expression network using Seidr
 
-  seidr.sh
+  - Infer:  independent gene-gene networks are created by a multitude of algorithms
+    seidr_algorithms.sh
+  - Import: In order to merge these networks, they are first sorted and ranked
+    seidr_import.sh
+  - Aggregate: Once all methods are ready, seidr can aggregate them to a crowd network
+    seidr_aggregate.sh
+  - Estimating a hard threshold for a given seidr network
+
