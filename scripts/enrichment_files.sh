@@ -17,3 +17,7 @@ awk '$2!="-"' | sed 's/EC://;s/ /|/g' | awk '!a[$0]++' | sort -k1,1 > gene_to_ke
 
 #
 cp *tsv /mnt/crick/www/enrichment/yellowhorn
+
+# configure
+cd /mnt/crick/www/enrichment
+/gopher2 config.json  > gopher2.out 2> gopher2.err &
