@@ -21,4 +21,4 @@ cp *tsv /mnt/crick/www/enrichment/yellowhorn
 # configure
 cd /mnt/crick/www/enrichment
 # https://github.com/bschiffthaler/gofer2
-/gopher2 config.json  > gopher2.out 2> gopher2.err &
+./gopher2 config.json  > gopher2.out 2> gopher2.err &
