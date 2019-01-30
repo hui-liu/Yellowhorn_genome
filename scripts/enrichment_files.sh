@@ -5,7 +5,9 @@ awk '{a[$1]=($1 in a ? a[$1]"|"$2: $0)} END{for (k in a) print a[k]}' | \
 sort -k1,1 > gene_to_pfam.tsv
 
 # go
-awk '{print $2"\t"$1}' xso_bg_GO.txt | \
+grep "^id: GO" /mnt/crick/www/enrichment/go-basic.obo | awk '{print $2}' > go_DB.txt
+awk 'NR==FNR{a[$1]=$1;next}($1 in a){print $0}' go_DB.txt xso_bg_GO.txt | \
+awk '{print $2"\t"$1}' | \
 awk '{a[$1]=($1 in a ? a[$1]"|"$2: $0)} END{for (k in a) print a[k]}'| \
 sort -k 1,1 > gene_to_go.tsv
 
