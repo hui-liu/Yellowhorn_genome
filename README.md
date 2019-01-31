@@ -32,3 +32,6 @@
     
   - Estimating a hard threshold for a given seidr network
 
+
+## GO, PFAM and KEGG enrichment
+`enrichment_files.sh`
