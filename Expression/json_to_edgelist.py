@@ -1,3 +1,6 @@
+# convert json format file to edgelist format file
+# usage: python json_to_edgelist.py filename_json.txt filename_edgelist.txt
+
 import json
 import sys
 
