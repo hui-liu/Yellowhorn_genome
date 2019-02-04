@@ -31,6 +31,8 @@
     `seidr_aggregate.sh`
     
   - Estimating a hard threshold for a given seidr network
+  
+    `seidr_threshold.sh`
 
 
 ## GO, PFAM and KEGG enrichment
