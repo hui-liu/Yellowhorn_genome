@@ -34,7 +34,7 @@
   
     `seidr_threshold.sh`
 
-  - Calculate network backbone and compare two network from backbone and threshold
+  - Calculate network backbone and compare two networks from backbone and threshold
   
     `seidr_backbone_compare.sh`
 
