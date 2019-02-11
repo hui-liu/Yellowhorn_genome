@@ -30,11 +30,11 @@
   
     `seidr_aggregate.sh`
     
-  - Estimating a hard threshold for a given seidr network
+  - Estimate a hard threshold for a given seidr network
   
     `seidr_threshold.sh`
 
-  - Calculate network backbone and compare with threshold
+  - Calculate network backbone and compare two network from backbone and threshold
   
     `seidr_backbone_compare.sh`
 
