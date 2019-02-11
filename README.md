@@ -35,6 +35,7 @@
     `seidr_threshold.sh`
 
   - Calculate network backbone and compare with threshold
+  
     `seidr_backbone_compare.sh`
 
 ## GO, PFAM and KEGG enrichment
