@@ -40,3 +40,7 @@
 
 ## GO, PFAM and KEGG enrichment
 `enrichment_files.sh`
+
+## Jbrowse
+
+`configure.sh`
