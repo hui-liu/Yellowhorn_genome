@@ -1,17 +1,17 @@
 # (1)  format the reference sequences for JBrowse
-bin/prepare-refseqs.pl --fasta /mnt/crick/data/yellow_horn/genome/genome2.fasta
+bin/prepare-refseqs.pl --fasta /mnt/crick/data/yellow_horn/genome/genome2.fasta --trackConfig '{"category": "Genome"}'
 
 # (2) format the gff file for JBrowse
 # (2.1) protein genes
-bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.protein_gene.gff3 --trackLabel Genes --trackType CanvasFeatures \
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.protein_gene.gff3 --trackLabel Gene --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 9px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.2) pseudo genes
-bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.pseudogene.gff3 --trackLabel Pseudogenes --trackType CanvasFeatures \
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.pseudogene.gff3 --trackLabel Pseudogene --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.3) ncRNA
-bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/ncRNA.gff3 --trackLabel ncRNAs --trackType CanvasFeatures \
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/ncRNA.gff3 --trackLabel ncRNA --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.4) Repeat sequences
