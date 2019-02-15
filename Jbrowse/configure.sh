@@ -29,7 +29,7 @@ bin/flatfile-to-json.pl --gff  /mnt/crick/data/yellow_horn/annotation/final.TE.g
 bin/add-bw-track.pl --bw_url expression/A0_10Y.bw \
 --label A0_10Y --key "A0_10Y" --category "RNA-seq coverage (leaves)" --plot \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
-#bin/remove-track.pl --trackLabel A0_10Y --dir data/trackList.json
+#bin/remove-track.pl --trackLabel A0_10Y --dir data/
 
 # (5) domains from pfam annotation?
 
