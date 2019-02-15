@@ -19,7 +19,7 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gf
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (3) SNPs
-# add the following lines by manual
+# add the following track by manual
       {
          "storeClass" : "JBrowse/Store/SeqFeature/VCFTabix",
          "key" : "Yellowhorn 189 samples",
