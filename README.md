@@ -41,6 +41,10 @@
   - Compare the backbone network and threshold network
   
     `compare.sh`
+    
+  - visualize the comparisons
+  
+    `visualize_comparisons.sh`
 
 ## GO, PFAM and KEGG enrichment
 `enrichment_files.sh`
