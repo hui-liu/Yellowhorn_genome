@@ -1,0 +1,55 @@
+
+#######
+# compare
+#######
+# backbone_one_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_one_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_one_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_one_percent_threshold_compare.sf > compare/xso_irp_backbone_one_percent_threshold_compare.txt
+
+# backbone_two_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_two_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_two_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_two_percent_threshold_compare.sf > compare/xso_irp_backbone_two_percent_threshold_compare.txt
+
+
+# backbone_three_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_three_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_three_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_three_percent_threshold_compare.sf > compare/xso_irp_backbone_three_percent_threshold_compare.txt
+
+# backbone_four_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_four_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_four_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_four_percent_threshold_compare.sf > compare/xso_irp_backbone_four_percent_threshold_compare.txt
+
+# backbone_five_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_five_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_five_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_five_percent_threshold_compare.sf > compare/xso_irp_backbone_five_percent_threshold_compare.txt
+
+# backbone_six_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_six_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_six_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_six_percent_threshold_compare.sf > compare/xso_irp_backbone_six_percent_threshold_compare.txt
+
+
+# backbone_seven_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_seven_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_seven_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_seven_percent_threshold_compare.sf > compare/xso_irp_backbone_seven_percent_threshold_compare.txt
+
+# backbone_eight_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_eight_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_eight_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_eight_percent_threshold_compare.sf > compare/xso_irp_backbone_eight_percent_threshold_compare.txt
+
+# backbone_nine_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_nine_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_nine_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_nine_percent_threshold_compare.sf > compare/xso_irp_backbone_nine_percent_threshold_compare.txt
+
+# backbone_ten_percent_threshold_compare
+seidr compare -f -o compare/xso_irp_backbone_ten_percent_threshold_compare.sf \
+backbone/xso_irp_backbone_ten_percent.sf threshold/xso_irp_aggregated_28.sf
+seidr view compare/xso_irp_backbone_ten_percent_threshold_compare.sf > compare/xso_irp_backbone_ten_percent_threshold_compare.txt
