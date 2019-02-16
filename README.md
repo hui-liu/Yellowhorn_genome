@@ -42,7 +42,7 @@
   
     `compare.sh`
     
-  - visualize the comparisons
+  - Visualize the comparisons
   
     `visualize_comparisons.sh`
 
