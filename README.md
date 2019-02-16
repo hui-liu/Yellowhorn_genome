@@ -34,9 +34,13 @@
   
     `seidr_threshold.sh`
 
-  - Calculate network backbone and compare two networks from backbone and threshold
+  - Construct the backbone network
   
-    `seidr_backbone_compare.sh`
+    `backbone.sh`
+    
+  - Compare the backbone network and threshold network
+  
+    `compare.sh`
 
 ## GO, PFAM and KEGG enrichment
 `enrichment_files.sh`
