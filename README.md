@@ -39,6 +39,7 @@
     `backbone.sh`
     
   - Compare the backbone network and threshold network
+  
     Two principles
     (1) We would like to select the backbone network for further analysis.
     (2) The genes in the backbone network should contain the important genes (we determine whether the unique genes is important      
