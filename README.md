@@ -40,7 +40,7 @@
     
   - Compare the backbone network and threshold network
   
-    Two principles
+    Two principles:
     (1) We would like to select the backbone network for further analysis.
     (2) The genes in the backbone network should contain the important genes (we determine whether the unique genes is important      
         according to use the GO enrichment analysis) found in the threshold network as much as possible.
