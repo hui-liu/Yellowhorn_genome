@@ -1,6 +1,6 @@
 cd /mnt/crick/data/yellow_horn/Enrichment
 # pfam
-sed '1,1d' xso_Pfam.annot | awk '{print $2"\t"$1}' | \
+sed '1,1d' xso_Pfam.annot |  awk '!a[$0]++'| awk '{print $2"\t"$1}' | \
 awk '{a[$1]=($1 in a ? a[$1]"|"$2: $0)} END{for (k in a) print a[k]}' | \
 sort -k1,1 > gene_to_pfam.tsv
 
