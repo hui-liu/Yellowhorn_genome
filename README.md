@@ -47,6 +47,10 @@
   
     `compare.sh`
     
+  - run `seidr roc` for 'irp' aggregated network, backbone nextorks and threshold (irp, 0.28) network
+    
+    `roc.sh`
+    
   - Visualize the comparisons
   
     `visualize_comparisons.sh`
