@@ -1,7 +1,9 @@
 # (1)  format the reference sequences for JBrowse
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 bin/prepare-refseqs.pl --fasta /mnt/crick/data/yellow_horn/genome/genome2.fasta --trackConfig '{"category": "Genome"}'
 
 # (2) format the gff file for JBrowse
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 # (2.1) protein genes
 bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.protein_gene.gff3 --trackLabel Gene --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 9px Univers,Helvetica,Arial,sans-serif"}'
@@ -18,11 +20,14 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/ncRNA.gff3 
 bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gff3 --trackLabel RepeatSequence --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
-# (3) pfam domain
+# (2.5) pfam domain
 cd /mnt/crick/data/yellow_horn
 python bin/pfam_bed.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.txt
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
+bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.txt --trackLabel Pfam --trackType CanvasFeatures \
+--config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
-# (4) SNPs
+# (3) SNPs
 # add the following track by manual
       {
          "storeClass" : "JBrowse/Store/SeqFeature/VCFTabix",
@@ -33,7 +38,7 @@ python bin/pfam_bed.py annotation/final.protein_gene.gff3 functional_annotation/
          "urlTemplate" : "vcf/xso.DP5.GQ20.MAF5.MR20.masked.vcf.gz"
       }
       
-# (5)  Expression
+# (4)  Expression
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse/data/expression
 ln -s /mnt/crick/data/yellow_horn/Expression/BWs_merged/* .
 
