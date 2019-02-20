@@ -88,7 +88,7 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
 done
 
-# (6) Index Names
+# (5) Index Names
 bin/generate-names.pl -v
 
 
