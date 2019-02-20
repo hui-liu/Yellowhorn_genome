@@ -1,5 +1,6 @@
 # (1)  format the reference sequences for JBrowse
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
+mkdir data;mkdir data/expression
 bin/prepare-refseqs.pl --fasta /mnt/crick/data/yellow_horn/genome/genome2.fasta --trackConfig '{"category": "Genome"}'
 
 # (2) format the gff file for JBrowse
