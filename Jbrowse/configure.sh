@@ -89,7 +89,4 @@ done
 # (6) Index Names
 bin/generate-names.pl -v
 
-# (7)  JBrowse configurations
-#set JBrowse link for yellowhorn in tool.php
-` header('Location: http://yellowhorn.plantgenie.org/jbrowse?data=data%2Fptr');`
 
