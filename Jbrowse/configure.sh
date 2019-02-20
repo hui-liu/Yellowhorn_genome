@@ -19,6 +19,8 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gf
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (3) pfam domain
+cd /mnt/crick/data/yellow_horn
+python bin/pfam_bed.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.txt
 
 # (4) SNPs
 # add the following track by manual
