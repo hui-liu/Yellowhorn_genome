@@ -18,7 +18,9 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/ncRNA.gff3 
 bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gff3 --trackLabel RepeatSequence --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
-# (3) SNPs
+# (3) pfam domain
+
+# (4) SNPs
 # add the following track by manual
       {
          "storeClass" : "JBrowse/Store/SeqFeature/VCFTabix",
@@ -29,8 +31,7 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gf
          "urlTemplate" : "vcf/xso.DP5.GQ20.MAF5.MR20.masked.vcf.gz"
       }
       
-# (4)  Expression
-#
+# (5)  Expression
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse/data/expression
 ln -s /mnt/crick/data/yellow_horn/Expression/BWs_merged/* .
 
@@ -44,7 +45,6 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 done
 
 # inflorescence
-
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 for i in $(grep "inflorescence" /mnt/crick/data/yellow_horn/Data_Preparation/rnaseq_sample_design.txt | cut -f 1)
 do
@@ -52,7 +52,6 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 --label $i --key "$i" --category "RNA-seq coverage (inflorescence)" --plot \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
 done
-
 
 # flower
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
@@ -63,7 +62,6 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
 done
 
-
 # leaf
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 for i in $(grep "leaf" /mnt/crick/data/yellow_horn/Data_Preparation/rnaseq_sample_design.txt | cut -f 1)
@@ -73,7 +71,6 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
 done
 
-
 # fruit
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 for i in $(grep "fruit" /mnt/crick/data/yellow_horn/Data_Preparation/rnaseq_sample_design.txt | cut -f 1)
@@ -82,9 +79,6 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 --label $i --key "$i" --category "RNA-seq coverage (fruit)" --plot \
 --min_score 0 --max_score 100 --pos_color "#937d62" --neg_color "#005EFF" --clip_marker_color "red" --height 100
 done
-
-
-# (5) domains from pfam annotation?
 
 # (6) Index Names
 bin/generate-names.pl -v
