@@ -31,7 +31,7 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.txt -
 # (3) SNPs
 cd data
 ln -s /mnt/crick/data/yellow_horn/vcf .
-cd /mnt/crick/data/yellow_horn
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 # add the following track by manual
 
       {
