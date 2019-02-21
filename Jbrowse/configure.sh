@@ -91,4 +91,5 @@ done
 # (5) Index Names
 bin/generate-names.pl -v
 
+bin/generate-names.pl
 
