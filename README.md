@@ -52,9 +52,13 @@
     
     [roc.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Expression/roc.sh)
     
-  - Visualize the comparisons
+  - Visualisation and GO enrichment for the comparisons
   
     [visualize_comparisons.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Expression/visualize_comparisons.sh)
+    
+  - modules detection and annotated the modules suing GO enrichment
+    
+     [modules_detection.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Expression/modules_detection.sh)
 
 ## GO, PFAM and KEGG enrichment
 
