@@ -18,7 +18,10 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/ncRNA.gff3 
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.4) Repeat sequences
-bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/annotation/final.TE.gff3 --trackLabel RepeatSequence --trackType CanvasFeatures \
+cd /mnt/crick/data/yellow_horn
+python bin/repeat_seqs.py annotation/final.TE.gff3 jbrowse/final.TE_jbrowse.gff3
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/final.TE_jbrowse.gff3 --trackLabel RepeatSequence --trackType CanvasFeatures \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.5) pfam domain
