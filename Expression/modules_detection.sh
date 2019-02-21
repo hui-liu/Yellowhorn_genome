@@ -48,8 +48,6 @@ x=${i/_GO.csv/}
 sed 's/,\("[^"]*"\)*/\t\1/g' $i | awk -F "\t" '{print $1","$5}' > $x\_revigo.csv 
 done
 
-#
-
 for i in $(ls *R)
 do
 x=${i/.R/}
@@ -64,34 +62,3 @@ done
 # mv $x.* $x
 # mv $x\_* $x
 # done
-
-
-
-#####
-# threshold network
-####
-## Drop disconnected nodes
-cd modules/irp_aggregated_28
-cp ../../threshold/xso_irp_aggregated_28.sf .
-seidr reheader xso_irp_aggregated_28.sf
- 
-## Create infomap data file (should be end with ".txt")
-seidr view -d $'\t' -N xso_irp_aggregated_28.sf | cut -f 1,2,28 > xso_irp_aggregated_28.txt
-
-## Create Gephi edges file data (should be end with ".tsv")
-echo -e "Source\tTarget\tWeight" > xso_irp_aggregated_28_edges.tsv
-seidr view -d $'\t' xso_irp_aggregated_28.sf | cut -f 1,2,28 >> xso_irp_aggregated_28_edges.tsv
-
-## Run Infomap
-Infomap xso_irp_aggregated_28.txt ./ --markov-time 0.5 -z &> xso_irp_aggregated_28.log
-
-## Remap numerical node IDs to gene names
-echo -e "path\tC1\tC2\tC3\tC4\tC5\tflow\tIndex\tId" > xso_irp_aggregated_28_nodes.tsv
-seidr resolve -s xso_irp_aggregated_28.sf \
-xso_irp_aggregated_28.tree >> xso_irp_aggregated_28_nodes.tsv
-
-
-# level2
-#^(([0-9]+:)[0-9]+)
-# level3
-#^((([0-9]+:)[0-9]+):[0-9]+)
