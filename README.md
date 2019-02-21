@@ -60,6 +60,7 @@
 
 ## Jbrowse
 
-`configure.sh`
+[configure.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Jbrowse/configure.sh)
 
+## notes
 https://archive.nytimes.com/www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html
