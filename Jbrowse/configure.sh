@@ -89,7 +89,4 @@ bin/add-bw-track.pl --bw_url expression/$i.bw \
 done
 
 # (5) Index Names
-bin/generate-names.pl -v
-
 bin/generate-names.pl
-
