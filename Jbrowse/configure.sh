@@ -29,7 +29,11 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.txt -
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (3) SNPs
+cd data
+ln -s /mnt/crick/data/yellow_horn/vcf .
+cd /mnt/crick/data/yellow_horn
 # add the following track by manual
+
       {
          "storeClass" : "JBrowse/Store/SeqFeature/VCFTabix",
          "key" : "Yellowhorn 189 samples",
