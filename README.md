@@ -57,7 +57,8 @@
     [visualize_comparisons.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Expression/visualize_comparisons.sh)
 
 ## GO, PFAM and KEGG enrichment
-`enrichment_files.sh`
+
+[enrichment_files.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/scripts/enrichment_files.sh)
 
 ## Jbrowse
 
