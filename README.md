@@ -71,11 +71,15 @@
 
 ## TF binding site prediction
 
+[meme-suite](http://meme-suite.org/doc/download.html)
+
 ```
 cd /mnt/crick/data/yellow_horn/promoter
+# upsteam sequences
 python ../bin/extract_upstream_2k_of_gene.py ../genome/genome2.fasta ../annotation/final.protein_gene.gff3 xso_up_2k.fasta
+# motif databases
+wget http://meme-suite.org/meme-software/Databases/motifs/motif_databases.12.18.tgz
+tar -zxvf motif_databases.12.18.tgz
+fimo --oc xso_up_2k_results --verbosity 1 --thresh 1e-5 motif_databases/ARABD/ArabidopsisDAPv1.meme xso_up_2k.fasta
 ```
-[TF binding site prediction tool](http://plantregmap.cbi.pku.edu.cn/binding_site_prediction.php)
-- input file: xso_up_2k.fasta
-- Species: Arabidopsis thaliana
-- Threshold p-value: 1e-5
+
