@@ -69,12 +69,13 @@
 [configure.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Jbrowse/configure.sh)
 
 
-## promoter
+## TF binding site prediction
 
 ```
 cd /mnt/crick/data/yellow_horn/promoter
 python ../bin/extract_upstream_2k_of_gene.py ../genome/genome2.fasta ../annotation/final.protein_gene.gff3 xso_up_2k.fasta
 ```
+[TF binding site prediction tool](http://plantregmap.cbi.pku.edu.cn/binding_site_prediction.php)
 
 ## notes
 https://archive.nytimes.com/www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html
