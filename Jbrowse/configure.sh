@@ -25,11 +25,16 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/final.TE_jbrow
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.5) pfam domain
-#cd /mnt/crick/data/yellow_horn
-#python bin/pfam_bed.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.txt
-#cd /mnt/crick/www/yellowhorn/plugins/jbrowse
-#bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.txt --trackLabel Pfam --trackType CanvasFeatures \
-#--config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+cd /mnt/crick/data/yellow_horn
+python bin/pfam_bed.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.txt
+python bin/pfam_bed_to_gff.py jbrowse/pfam_bed.txt > jbrowse/pfam.gff
+
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/pfam.gff \
+--trackLabel Pfam --trackType CanvasFeatures --out data/yellowhorn \
+--config '{"labelTranscripts": true, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+
+#bin/remove-track.pl --dir data/yellowhorn --trackLabel pfam -D
 
 # (3) SNPs
 cd data
