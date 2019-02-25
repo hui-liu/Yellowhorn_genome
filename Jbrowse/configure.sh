@@ -32,7 +32,7 @@ python bin/pfam_bed_to_gff.py jbrowse/pfam_bed.txt > jbrowse/pfam.gff
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/pfam.gff \
 --trackLabel PfamDomain --trackType CanvasFeatures --out data/yellowhorn \
---config '{"labelTranscripts": true, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+--config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 #bin/remove-track.pl --dir data/yellowhorn --trackLabel PfamDomain -D
 
