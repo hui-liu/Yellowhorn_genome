@@ -37,6 +37,13 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
 # style→strandArrow
 #bin/remove-track.pl --dir data/yellowhorn --trackLabel PfamDomain -D
 
+# (2.6) promoter
+cd /mnt/crick/data/yellow_horn
+python bin/promoter_gff.py annotation/final.protein_gene.gff3 /mnt/crick/data/yellow_horn/promoter/xso_up_2k_results/fimo.gff 0.001 jbrowse/promoter_jbrowse.gff
+cd /mnt/crick/www/yellowhorn/plugins/jbrowse
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/promoter_jbrowse.gff --trackLabel Promoter --trackType CanvasFeatures \
+--config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+
 # (3) SNPs
 cd data
 ln -s /mnt/crick/data/yellow_horn/vcf .
