@@ -34,6 +34,7 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
 --trackLabel PfamDomain --trackType CanvasFeatures --out data/yellowhorn \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
+# style→strandArrow
 #bin/remove-track.pl --dir data/yellowhorn --trackLabel PfamDomain -D
 
 # (3) SNPs
