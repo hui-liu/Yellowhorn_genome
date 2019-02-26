@@ -56,7 +56,9 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/promoter_up_1.
 --trackLabel "Promoter (upstream 1.5k)" --trackType CanvasFeatures --out data/yellowhorn \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
-# "color" : "#2EC4B6"
+# "color" : "#2EC4B6",
+# "height" : 0.35,
+
 
 # (3) SNPs
 cd data
