@@ -39,11 +39,19 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
 
 # (2.6) promoter
 cd /mnt/crick/data/yellow_horn
-python bin/promoter_gff.py promoter/xso_up_2k.fasta /mnt/crick/data/yellow_horn/promoter/xso_up_2k_results/fimo.gff 0.001 jbrowse/promoter_jbrowse.gff
+python bin/promoter_gff.py promoter/xso_up_2k.fasta /mnt/crick/data/yellow_horn/promoter/xso_up_2k_results/fimo.gff 0.001 jbrowse/promoter_up_2k_jbrowse.gff
+python bin/promoter_gff.py promoter/xso_up_1.5k.fasta /mnt/crick/data/yellow_horn/promoter/xso_up_1.5k_results/fimo.gff 0.001 jbrowse/promoter_up_1.5k_jbrowse.gff
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
-bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/promoter_jbrowse.gff \
---trackLabel Promoter --trackType CanvasFeatures --out data/yellowhorn \
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/promoter_up_2k_jbrowse.gff \
+--trackLabel "Promoter (upstream 2k)" --trackType CanvasFeatures --out data/yellowhorn \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+#
+bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/promoter_up_1.5k_jbrowse.gff \
+--trackLabel "Promoter (upstream 1.5k)" --trackType CanvasFeatures --out data/yellowhorn \
+--config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
+
+# "color" : "#FF9F1C"
+
 
 # (3) SNPs
 cd data
