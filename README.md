@@ -73,4 +73,4 @@
 
 [Database](http://meme-suite.org/meme-software/Databases/motifs/motif_databases.12.18.tgz)
 
-[promoter.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Jbrowse/promoter.sh)
+[promoter.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/scripts/promoter.sh)
