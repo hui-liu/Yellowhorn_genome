@@ -20,7 +20,6 @@ with open(sys.argv[1], 'r') as f:
 
 cutoff = float(sys.argv[3])
 out = open(sys.argv[4], 'w')
-
 with open(sys.argv[2], 'r') as f:
     for line in f:
         if line[0] == "#": continue
@@ -29,7 +28,7 @@ with open(sys.argv[2], 'r') as f:
         qvalue =  float(lsp[8].split()[1].split(";")[0])
         if qvalue <= cutoff:
             id  = lsp[0]
-            chr, start, end, starnd = aDict[id]
+            chr, start, end, strand = aDict[id]
             if strand == "FORWARD":
                 pstart, pend = start + int(lsp[3]) - 1, start + int(lsp[4])- 1
                 temp = lsp[5:8] + [attri]
