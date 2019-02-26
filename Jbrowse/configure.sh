@@ -35,6 +35,12 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # style→strandArrow
+# link to pfam
+#         "onClick"  : {
+#             "label": "search at Pfam",
+#             "url": "https://pfam.xfam.org/family/{name}#tabview=tab1"
+#         },
+
 #bin/remove-track.pl --dir data/yellowhorn --trackLabel PfamDomain -D
 
 # (2.6) promoter
