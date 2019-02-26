@@ -1,13 +1,10 @@
 import sys
 
-USAGE = "\nTSS -2000bp\nusage: python  %s genome.fasta gffile out.fasta\n" % sys.argv[0]
+USAGE = "\nTSS -2000bp\nusage: python %s genome.fasta upstream_size gffile out.fasta\n" % sys.argv[0]
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 5:
     print USAGE
     sys.exit()
-
-# upstream
-length = 2000
 
 def parseFasta(filename):
     fas = {}
@@ -24,7 +21,7 @@ def parseFasta(filename):
             fas[id] = ''.join(seq)
     return fas
 
-def upstream2k(filename, fas):
+def upstream2k(filename, fas, length):
     up2kcoor = {}
     with open(filename, 'r') as f:
         for line in f:
@@ -49,9 +46,10 @@ def revcomp(seq):
     return ''.join(result)
 
 fas = parseFasta(sys.argv[1])
-up2kcoor = upstream2k(sys.argv[2], fas)
-OUT = open(sys.argv[3], 'w')
-
+# upstream
+length = int(sys.argv[2])
+up2kcoor = upstream2k(sys.argv[3], fas, length)
+OUT = open(sys.argv[4], 'w')
 
 for i in up2kcoor:
     for j in up2kcoor[i]:
@@ -62,11 +60,11 @@ for i in up2kcoor:
             if seq.count("N") + seq.count("n") == length:
                 continue
             else:
-                OUT.write(">" + j[3] + " | " + i + ":" + str(j[0] + 1) + "-" + str(j[1]) + " REVERSE " + "LENGTH=" + str(j[1] -j[0]) + "\n" + seq + "\n")
+                OUT.write(">" + j[3] + " | " + i + ":" + str(j[0] + 1) + "-" + str(j[1]) + " REVERSE " + "LENGTH=" + str(j[1] -j[0])
         elif j[2] =="+":
             seq = fas[i][j[0]: j[1]]
             if seq.count("N") + seq.count("n") == length:
                 continue
             else:
-                OUT.write(">" + j[3] + " | " + i + ":" + str(j[0] + 1) + "-" + str(j[1]) + " FORWARD " + "LENGTH=" + str(j[1] -j[0]) + "\n" + seq + "\n")
+                OUT.write(">" + j[3] + " | " + i + ":" + str(j[0] + 1) + "-" + str(j[1]) + " FORWARD " + "LENGTH=" + str(j[1] -j[0])
 OUT.close()
