@@ -73,4 +73,4 @@
 
 [meme-suite](http://meme-suite.org/doc/download.html)
 
-
+[promoter.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Jbrowse/promoter.sh)
