@@ -71,6 +71,6 @@
 
 ## TF binding site prediction
 
-[meme-suite](http://meme-suite.org/doc/download.html)
+[Database](http://meme-suite.org/meme-software/Databases/motifs/motif_databases.12.18.tgz)
 
 [promoter.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Jbrowse/promoter.sh)
