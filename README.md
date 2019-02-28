@@ -19,7 +19,7 @@
 
 - Calculate co-expression network using Seidr
 
-  - Infer: Independent gene-gene networks are created by a multitude of algorithms
+  - Infer: Independent gene-gene networks are created by 12 algorithms
   
     [seidr_algorithms.sh](https://github.com/hui-liu/Yellowhorn_genome/blob/master/Expression/seidr_algorithms.sh)
     
