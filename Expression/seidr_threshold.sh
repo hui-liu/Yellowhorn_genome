@@ -1,6 +1,6 @@
 # irp
 seidr threshold seidr_results/xso_irp_aggregated.sf > seidr_threshold/xso_irp_threshold.txt 2>seidr_threshold/xso_irp_threshold.err
-seidr view -t 0.28 -b seidr_results/xso_irp_aggregated.sf > seidr_results/xso_irp_aggregated_0.28.txt
+seidr view -t 0.28 -b seidr_results/xso_irp_aggregated.sf > seidr_results/xso_irp_aggregated_28.txt
 
 # borda
 #seidr threshold seidr_results/xso_borda_aggregated.sf > seidr_threshold/xso_borda_threshold.txt 2>seidr_threshold/xso_borda_threshold.err
