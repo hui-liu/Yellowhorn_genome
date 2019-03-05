@@ -1,5 +1,5 @@
 # Counting heterozygous genotypes per sample in a VCF file
-# HET_SNPs/Total_SNPs
+# HET_SNPs/sample_SNPs
 import cyvcf2
 import numpy as np
 import sys
@@ -23,6 +23,6 @@ OUT = open(sys.argv[2], 'w')
 OUT.write("sample" + "\t" + "HET_SNPs" + "\t" + "sample_SNPs" + "\t" + "Total_SNPs" + "\t" + "Heterozygosity" + "\n")
 for s in vcf.samples:
     OUT.write("\t".join([s, str(HET_SNPs_counts[s]), str(sample_SNPs_counts[s]), str(Total_SNPs_counts), 
-              str(round(HET_SNPs_counts[s] / float(Total_SNPs_counts), 2))]) + "\n")
+              str(round(HET_SNPs_counts[s] / float(sample_SNPs_counts[s]), 2))]) + "\n")
 
 OUT.close()
