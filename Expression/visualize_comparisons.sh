@@ -1,4 +1,4 @@
-# plot and go enrichment
+# venn plot and go enrichment
 cd /Pinus1/Liuhui/Xsorbifolium/gene_expression/seider
 for i in one two three four five six seven eight nine ten
 do
