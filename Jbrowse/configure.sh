@@ -34,12 +34,28 @@ bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
 --trackLabel PfamDomain --trackType CanvasFeatures --out data/yellowhorn \
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
-# style→strandArrow
-# link to pfam
-#         "onClick"  : {
-#             "label": "search at Pfam",
-#             "url": "https://pfam.xfam.org/family/{name}#tabview=tab1"
-#         },
+# {
+   # "onClick" : {
+      # "url" : "https://pfam.xfam.org/family/{name}#tabview=tab1",
+      # "label" : "search at Pfam"
+   # },
+   # "compress" : 0,
+   # "style" : {
+      # "textFont" : "normal 9px Univers,Helvetica,Arial,sans-serif",
+      # "className" : "feature",
+      # "strandArrow" : false,
+      # "color" : "#FF1654"
+   # },
+   # "trackType" : "CanvasFeatures",
+   # "category" : "Annotation",
+   # "storeClass" : "JBrowse/Store/SeqFeature/NCList",
+   # "type" : "CanvasFeatures",
+   # "labelTranscripts" : false,
+   # "label" : "PfamDomain",
+   # "key" : "PfamDomain",
+   # "urlTemplate" : "tracks/PfamDomain/{refseq}/trackData.json"
+# }
+
 
 #bin/remove-track.pl --dir data/yellowhorn --trackLabel PfamDomain -D
 
