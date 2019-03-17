@@ -25,9 +25,15 @@ bin/flatfile-to-json.pl --gff /mnt/crick/data/yellow_horn/jbrowse/final.TE_jbrow
 --config '{"labelTranscripts": false, "category": "Annotation"}' --clientConfig '{ "textFont" : "normal 8px Univers,Helvetica,Arial,sans-serif"}'
 
 # (2.5) pfam domain
-cd /mnt/crick/data/yellow_horn
-python bin/pfam_bed_v2.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.tsv
+#cd /mnt/crick/data/yellow_horn
+#python bin/pfam_bed_v2.py annotation/final.protein_gene.gff3 functional_annotation/interproscan.tsv jbrowse/pfam_bed.tsv
 #python bin/pfam_bed_to_gff.py jbrowse/pfam_bed.txt > jbrowse/pfam.gff
+awk '$3=="CDS"' ../annotation/final.protein_gene.gff3 | sed 's/=.*;Parent//' > ../annotation/final.protein_gene_CDS.gff3
+awk '$4=="Pfam"' interproscan.tsv | cut -f 1,5,7-8 | \
+awk '{print $1"\t""interproscan\tpfam\t"$3"\t"$4"\t.\t.\t.\tID=PFAM:"$2}'| \
+perl /media/12TB/liuhui/bin/scripts/protein2genome.pl ../annotation/final.protein_gene_CDS.gff3 | \
+cut -f 1,4,5,9 | sed 's/ID=PFAM://;s/(.*//' | awk '{print $1"\t"$2-1"\t"$3"\t"$4}' > pfam_bed.tsv
+
 
 cd /mnt/crick/www/yellowhorn/plugins/jbrowse
 bin/flatfile-to-json.pl --bed /mnt/crick/data/yellow_horn/jbrowse/pfam_bed.tsv \
